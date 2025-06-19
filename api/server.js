@@ -17,8 +17,9 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("✅ Connected to MongoDB");
-    app.listen(process.env.PORT || 3001, () => {
-      console.log("🚀 Server running on http://localhost:3001");
-    });
+    app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+    console.log("🚀 Server running on http://0.0.0.0:3001");
+});
+
   })
   .catch((err) => console.error("MongoDB connection error:", err));

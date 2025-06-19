@@ -12,7 +12,7 @@ export const AddTaskForm = ({ fetchTasks }) => {
     try {
       await axios.post(API_URL, { name: newTask });
       setNewTask("");
-      fetchTasks(); // ✅ This now works correctly
+      fetchTasks(); 
     } catch (err) {
       console.error("Error adding task", err);
     }
